@@ -7,21 +7,23 @@
   </head>
   <body class="wrapper">
     <header class="header">
-      <img src="./eisenhower-matrix.jpg" alt="Matrix image">
-      <a class="more" href="https://goal-life.com/page/method/matrix-eisenhower">Want more details?</a>
+      <img class="header__image" src="./eisenhower-matrix.jpg" alt="Matrix image">
+      <a class="header__more" href="https://goal-life.com/page/method/matrix-eisenhower">Want more details?</a>
     </header>
     
-    <section class="content">
-      <div id="new-item-section">
-        <label class="section-title new-task-label" for="new-task">Add Item</label>
-        <div class="task-row-wrapper">
-          <input id="new-task" class="task text-input" type="text">
+    <section class="tasks">
+      <div id="new-task">
+        <label class="tasks__title new-task__label" for="new-task__input">Add Item</label>
+        <div class="new-task__line">
+          <input id="new-task__input" class="task text-input" type="text">
           <button class="btn">Add</button>
         </div>
       </div>
-      <h3 class="section-title">Todo</h3>
-      <ul id="incomplete-tasks">
-        <li class="task-item">
+      
+      <h3 class="tasks__title">Todo</h3>
+      
+      <ul class="tasks__list" id="incomplete-tasks">
+        <li class="tasks__item">
           <input class="checkbox-input" type="checkbox">
           <label class="task title">Pay Bills</label>
           <input class="editable task text-input" type="text">
@@ -30,7 +32,7 @@
             <img class="delete-img" src="./remove.svg" alt="Remove button">
           </button>
         </li>
-        <li class="task-item edit-mode">
+        <li class="tasks__item tasks__item-edit-mode">
           <input class="checkbox-input" type="checkbox">
           <label class="task title">Go Shopping</label>
           <input class="editable task text-input" type="text" value="Go Shopping">
@@ -40,9 +42,11 @@
           </button>
         </li>
       </ul>
-      <h3>Completed</h3>
-      <ul id="completed-tasks">
-        <li class="task-item">
+      
+      <h3 class="tasks__title">Completed</h3>
+      
+      <ul class="tasks__list" id="completed-tasks">
+        <li class="tasks__item">
           <input class="checkbox-input" type="checkbox" checked>
           <label class="task title">See the Doctor</label>
           <input class="editable task text-input" type="text">
@@ -53,6 +57,7 @@
         </li>
       </ul>
     </section>
+    
     <script src="app.js"></script>
   </body>
 </html>
